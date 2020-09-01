@@ -23,7 +23,7 @@ Data collected in this service is stored in a MongoDB server since it is in plai
 For further improvement, we can deploy a message broker into the environment for async queueing of event logging.
 
 ## Solution Architecture C4 Diagram
-![Alt text](docs/c4.png?raw=true "Container Diagram")
+![Container Diagram](https://github.com/alper-basaran/backend-access-management/blob/master/docs/C4.png)
 
 ## How to Run
 For running the project locally, we need to launch 3 services 
