@@ -1,0 +1,45 @@
+version: '3.4'
+
+services:
+
+  mongo-server:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mongopass
+    ports:      
+      - "27017:27017"
+      
+  redis-server:
+    restart: always
+    image: 'redis:4-alpine'
+    command: redis-server --requirepass redispass
+    ports:
+      - '6379:6379'
+  
+  #access-service:
+  #  build:
+  #    context: ./src/Services.Access.Api
+  #  depends_on:
+  #    - "sql-server"
+  #    - "redis-server"
+  
+  #audit-service:
+  #  restart: always
+  #  build:
+  #    context: ./src/Services.Audit
+  #  depends_on:
+  #    - "mongo-server"
+  #  ports:
+  #    - '8085:80'
+      
+  
+  #sql-server:
+  #  image:
+  #  environment:
+  #    SA_PASSWORD: 
+  #    ACCEPT_EULA: "Y"
+  #    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin/"
+  #  ports:
+  #    - "1434:1433"

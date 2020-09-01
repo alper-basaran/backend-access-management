@@ -48,6 +48,9 @@ $ cd src/Services.Audiy.Api
 $ dotnet build Services.Audit.Api.csproj
 $ dotnet run Services.Audit.Api.csproj --urls=http://localhost:5001
 ```
+
+Once the services are up and running, you can perform test requests by using the Postman environment and collection  files available under the folder /postman
+
 > :warning: In order for audit events to be logged successfully, the Access service needs to be aware of the connection endpointfor the Audit. In case the service URL needs to be different than localhost:5001, this settings need to be altered in appsettings.json file or needs to be added into an environment variable of Services.Access.Api project.
 
 #### TODO
