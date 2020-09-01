@@ -58,8 +58,5 @@ For further improving this solution we can,
 
 - Dockerize the services
 - Add swagger for API documentation, XML comments are ready for that!
-- Add automapper for wiring API DTOs with Domain objects
-- Develop integration test for controllers
 - Increase unit test coverage
-- Add fluent validator, to extract validation logic out of mappers and controller
 - Implement soft deletion to entities in the relational database
